@@ -1,0 +1,17 @@
+{
+  "name": "cachimo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/svipben/cachimo.git",
+  "author": "svipben <benas.svipas@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint . --ext js",
+    "test": "jest tests"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  },
+  "keywords": ["cache", "in-memory", "storage"]
+}
