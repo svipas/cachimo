@@ -98,26 +98,26 @@ function clear() {
  * @param {number} timeout after how much time in milliseconds element will be deleted
  * @param {(err: Error, key: string | number | boolean, value: any, timeout: number)} callback will be executed after given `timeout`
  *
- * @returns {boolean | Promise<{ key: string | number | boolean, value: any, timeout: number }>}
+ * @returns {boolean | Promise<{ key: string | number | boolean, value: any, timeout: number }>} boolean or Promise
  */
 function put(key, value, timeout, callback) {
   // key type is incorrect
   if (typeof key !== 'string' && typeof key !== 'number' && typeof key !== 'boolean') {
-    throw new Error(`key can be only: string | number | boolean instead of ${typeof key}`);
+    throw new TypeError(`key can be only: string | number | boolean instead of ${typeof key}`);
   }
   // check if key is not NaN
   if (typeof key === 'number' && isNaN(key)) {
-    throw new Error('key can be only: string | number | boolean instead of NaN');
+    throw new TypeError('key can be only: string | number | boolean instead of NaN');
   }
 
   // timeout type is incorrect and/or timeout is not positive number
   if (timeout !== undefined && (typeof timeout !== 'number' || isNaN(timeout) || timeout <= 0)) {
-    throw new Error('timeout should be positive number');
+    throw new TypeError('timeout should be positive number');
   }
 
   // callback type is incorrect
   if (callback !== undefined && typeof callback !== 'function') {
-    throw new Error(`callback should be function instead of ${typeof callback}`);
+    throw new TypeError(`callback should be function instead of ${typeof callback}`);
   }
 
   // key does exist
