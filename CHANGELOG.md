@@ -1,3 +1,14 @@
+## [1.0.3](https://github.com/svipben/cachimo/releases/tag/1.0.3) (2018-02-17)
+
+### Added
+
+* Travis CI.
+* Build status and NPM version badges in `README.md`.
+
+### Changed
+
+* `clear()` clears all timeouts as well. [#1](https://github.com/svipben/cachimo/issues/1)
+
 ## [1.0.2](https://github.com/svipben/cachimo/releases/tag/1.0.2) (2018-02-07)
 
 ### Added
