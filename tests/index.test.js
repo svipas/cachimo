@@ -91,3 +91,13 @@ test('element remove before timeout', done => {
   cachimo.remove('key');
   promise.catch(err => expect(err.message).toBe('key does not exist'));
 });
+
+test('clear all timeouts', () => {
+  cachimo.put('key', 'value', 1000);
+  cachimo.clear();
+
+  expect(cachimo.put('key', 'value')).toBeTruthy();
+  expect(cachimo.has('key')).toBeTruthy();
+  expect(cachimo.get('key')).toBe('value');
+  expect(cachimo.size()).toBe(1);
+});

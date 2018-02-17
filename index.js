@@ -1,4 +1,5 @@
 const cache = new Map();
+const timeouts = [];
 
 /**
  * Returns value from cache by given `key`.
@@ -70,11 +71,12 @@ function entries() {
 }
 
 /**
- * Removes all elements stored in cache.
+ * Removes all elements stored in cache and clears all timeouts.
  *
  * @returns {number} how much elements was removed from cache
  */
 function clear() {
+  timeouts.forEach(t => clearTimeout(t));
   const length = size();
   cache.clear();
   return length;
@@ -130,25 +132,27 @@ function put(key, value, timeout, callback) {
   // return Promise
   if (timeout !== undefined && callback === undefined) {
     return new Promise((resolve, reject) => {
-      setTimeout(() => {
+      const t = setTimeout(() => {
         if (cache.delete(key)) {
           resolve({ key, value, timeout });
         } else {
           reject(new Error(`${key} does not exist`));
         }
       }, timeout);
+      timeouts.push(t);
     });
   }
 
   // execute callback
   if (timeout !== undefined && callback !== undefined) {
-    setTimeout(() => {
+    const t = setTimeout(() => {
       if (cache.delete(key)) {
         callback(null, key, value, timeout);
       } else {
         callback(new Error(`${key} does not exist`));
       }
     }, timeout);
+    timeouts.push(t);
   }
 
   return true;

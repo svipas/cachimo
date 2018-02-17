@@ -46,7 +46,7 @@ export function values(): Array<any>;
 export function entries(): Array<[string | number | boolean, any]>;
 
 /**
- * Removes all elements stored in cache.
+ * Removes all elements stored in cache and clears all timeouts.
  *
  * @returns how much elements was removed from cache
  */
