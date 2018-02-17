@@ -5,3 +5,5 @@ node_js:
 script:
   - "yarn run lint"
   - "yarn test"
+notifications:
+  email: false

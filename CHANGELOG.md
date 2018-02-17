@@ -9,6 +9,7 @@
 * `clear()` function to also reject Promise or execute callback to inform if timeout was cleared.
 * `README.md` to show how new `clear()` function works.
 * Travis CI to also run ESLint before tests.
+* Travis CI to disable email notifications.
 * Tests to be more isolated.
 * Moved all `index.js` code to the `src/cachimo.js`.
 
