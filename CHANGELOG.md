@@ -1,11 +1,16 @@
 ## [1.0.4](https://github.com/svipben/cachimo/releases/tag/1.0.4) (2018-02-17)
 
-### Improved
+### Added
+
+* `typings` property in `package.json`.
+
+### Changed
 
 * `clear()` function to also reject Promise or execute callback to inform if timeout was cleared.
 * `README.md` to show how new `clear()` function works.
 * Travis CI to also run ESLint before tests.
 * Tests to be more isolated.
+* Moved all `index.js` code to the `src/cachimo.js`.
 
 ### Updated
 
