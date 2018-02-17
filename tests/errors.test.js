@@ -1,4 +1,4 @@
-const cachimo = require('../index');
+const cachimo = require('../src/cachimo');
 
 test('errors', () => {
   expect(() => cachimo.put(null)).toThrowError();

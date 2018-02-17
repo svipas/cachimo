@@ -1,4 +1,4 @@
-const cachimo = require('../index');
+const cachimo = require('../src/cachimo');
 
 test('callback', done => {
   expect(

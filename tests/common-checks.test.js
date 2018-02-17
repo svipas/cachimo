@@ -1,4 +1,4 @@
-const cachimo = require('../index');
+const cachimo = require('../src/cachimo');
 
 test('common checks', () => {
   expect(cachimo.put('key', 'value')).toBeTruthy();

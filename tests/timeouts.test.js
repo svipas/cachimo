@@ -1,4 +1,4 @@
-const cachimo = require('../index');
+const cachimo = require('../src/cachimo');
 
 test('clear all timeouts (callback)', () => {
   cachimo.put('key', 'value', 1000, err => {
