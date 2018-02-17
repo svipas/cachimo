@@ -82,6 +82,7 @@ test('callback', done => {
 
 test('element remove before timeout', done => {
   cachimo.put('key', 'value', 500, err => {
+    expect(err).toBeInstanceOf(Error);
     expect(err.message).toBe('key does not exist');
     done();
   });
@@ -89,15 +90,22 @@ test('element remove before timeout', done => {
 
   const promise = cachimo.put('key', 'value', 1000);
   cachimo.remove('key');
-  promise.catch(err => expect(err.message).toBe('key does not exist'));
+  promise.catch(err => {
+    expect(err).toBeInstanceOf(Error);
+    expect(err.message).toBe('key does not exist');
+  });
 });
 
 test('clear all timeouts', () => {
-  cachimo.put('key', 'value', 1000);
-  cachimo.clear();
+  cachimo.put('promiseKey', 'promiseValue', 1000).catch(err => {
+    expect(err).toBeInstanceOf(Error);
+    expect(err.message).toBe('promiseKey timeout was cleared');
+  });
 
-  expect(cachimo.put('key', 'value')).toBeTruthy();
-  expect(cachimo.has('key')).toBeTruthy();
-  expect(cachimo.get('key')).toBe('value');
-  expect(cachimo.size()).toBe(1);
+  cachimo.put('cbKey', 'cbValue', 2000, err => {
+    expect(err).toBeInstanceOf(Error);
+    expect(err.message).toBe('cbKey timeout was cleared');
+  });
+
+  cachimo.clear();
 });
