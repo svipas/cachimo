@@ -78,6 +78,8 @@ function entries() {
 function clear() {
   timeouts.forEach((callback, timeout) => {
     clearTimeout(timeout);
+
+    // reject Promise or execute callback which returns Error
     callback();
   });
 
