@@ -21,6 +21,8 @@ yarn add cachimo
 
 # How to use
 
+### `put` function
+
 ```js
 const cachimo = require('cachimo');
 
@@ -59,6 +61,31 @@ cachimo.put('key', 'value', 1000, (err, key, value, timeout) => {
 });
 ```
 
+### `clear` function
+
+```js
+const cachimo = require('cachimo');
+
+// Promise
+cachimo.put('key', 'value', 1000).catch(err => {
+  // you will get error because at the end of the code there's `clear()` function which clears all timeouts as well as keys and values
+  throw err; // "key timeout was cleared"
+});
+
+// callback
+cachimo.put('key', 'value', 1000, err => {
+  if (err) {
+    // you will get error because at the end of the code there's `clear()` function which clears all timeouts as well as keys and values
+    throw err; // "key timeout was cleared"
+  }
+});
+
+// removes all elements stored in cache and clears all timeouts
+cachimo.clear(); // returns number of how much elements was removed from cache
+```
+
+### Other functions
+
 ```js
 const cachimo = require('cachimo');
 
@@ -82,7 +109,4 @@ cachimo.values(); // ['value']
 
 // returns all entries (keys and values) stored in cache
 cachimo.entries(); // [['key', 'value']]
-
-// removes all elements stored in cache and clears all timeouts
-cachimo.clear(); // returns number of how much elements was removed from cache
 ```
