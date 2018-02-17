@@ -5,6 +5,7 @@
 * `clear()` function to also reject Promise or execute callback to inform if timeout was cleared.
 * `README.md` to show how new `clear()` function works.
 * Travis CI to also run ESLint before tests.
+* Tests to be more isolated.
 
 ### Updated
 
