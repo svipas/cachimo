@@ -2,6 +2,9 @@
 
 Stores key with value in-memory and can be deleted manually or after given timeout.
 
+[![build status](https://img.shields.io/travis/svipben/cachimo.svg)](https://travis-ci.org/svipben/cachimo)
+[![npm version](https://img.shields.io/npm/v/cachimo.svg)](https://www.npmjs.com/package/cachimo)
+
 # Installation
 
 **NPM**
@@ -80,6 +83,6 @@ cachimo.values(); // ['value']
 // returns all entries (keys and values) stored in cache
 cachimo.entries(); // [['key', 'value']]
 
-// removes all elements stored in cache
+// removes all elements stored in cache and clears all timeouts
 cachimo.clear(); // returns number of how much elements was removed from cache
 ```
