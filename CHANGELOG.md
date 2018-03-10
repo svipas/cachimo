@@ -1,3 +1,12 @@
+## [1.0.5](https://github.com/svipben/cachimo/releases/tag/1.0.5) (2018-03-10)
+
+* Renamed `index.d.ts` to `cachimo.d.ts` and moved it to `src` dir.
+* Deleted `index.js` and changed `main` in `package.json` to the `src/cachimo.js`
+* Reduced logo width and height.
+* ⬆️ `keywords` in `package.json`
+* ⬆️ ESLint to 4.18.2
+* ⬆️ Jest to 22.4.2
+
 ## [1.0.4](https://github.com/svipben/cachimo/releases/tag/1.0.4) (2018-02-17)
 
 ### Added
