@@ -5,6 +5,11 @@
 * `jsconfig.json` file which represents project structure.
 * `yarn-error.log` in `.gitignore`.
 
+### Changed
+
+* ⬆️ ESLint to 4.19.1.
+* ⬆️ Jest to 22.4.3.
+
 ### Removed
 
 * logo from `README.md`.
