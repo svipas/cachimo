@@ -5,7 +5,7 @@ Stores key with value in-memory and can be deleted manually or after given timeo
 [![build status](https://img.shields.io/travis/svipben/cachimo.svg)](https://travis-ci.org/svipben/cachimo)
 [![npm version](https://img.shields.io/npm/v/cachimo.svg)](https://www.npmjs.com/package/cachimo)
 
-# Installation
+## Installation
 
 **NPM**
 
@@ -19,7 +19,7 @@ npm install cachimo
 yarn add cachimo
 ```
 
-# How to use
+## How to use
 
 ### `put` function
 
