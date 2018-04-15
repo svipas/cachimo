@@ -1,3 +1,14 @@
+## [1.0.6](https://github.com/svipben/cachimo/releases/tag/1.0.6) (2018-04-15)
+
+### Added
+
+* `jsconfig.json` file which represents project structure.
+* `yarn-error.log` in `.gitignore`.
+
+### Removed
+
+* logo from `README.md`.
+
 ## [1.0.5](https://github.com/svipben/cachimo/releases/tag/1.0.5) (2018-03-10)
 
 * Renamed `index.d.ts` to `cachimo.d.ts` and moved it to `src` dir.
