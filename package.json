@@ -1,7 +1,7 @@
 {
   "name": "cachimo",
   "description": "Stores key with value in-memory and can be deleted manually or after given timeout.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "src/cachimo.js",
   "typings": "src/cachimo.d.ts",
   "repository": "https://github.com/svipben/cachimo.git",
@@ -12,8 +12,8 @@
     "test": "jest tests"
   },
   "devDependencies": {
-    "eslint": "^4.18.2",
-    "jest": "^22.4.2"
+    "eslint": "^4.19.1",
+    "jest": "^22.4.3"
   },
   "keywords": ["cache", "in-memory", "storage", "nodejs", "browser"]
 }
