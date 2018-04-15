@@ -1,4 +1,4 @@
-![cachimo](logo.png)
+# cachimo
 
 Stores key with value in-memory and can be deleted manually or after given timeout.
 
