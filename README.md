@@ -2,7 +2,7 @@
 
 Stores key with value in-memory and can be deleted manually or after given timeout.
 
-[![build status](https://img.shields.io/travis/svipben/cachimo.svg)](https://travis-ci.org/svipben/cachimo)
+[![build status](https://circleci.com/gh/svipben/cachimo.svg?style=svg)](https://circleci.com/gh/svipben/cachimo)
 [![npm version](https://img.shields.io/npm/v/cachimo.svg)](https://www.npmjs.com/package/cachimo)
 
 ## Installation
