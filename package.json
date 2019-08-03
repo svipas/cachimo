@@ -1,7 +1,7 @@
 {
   "name": "cachimo",
   "description": "Stores key with value in-memory and can be deleted manually or after given timeout.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "src/cachimo.js",
   "typings": "src/cachimo.d.ts",
   "repository": "https://github.com/svipben/cachimo.git",
