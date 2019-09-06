@@ -1,3 +1,7 @@
+## [Unreleased]
+
+- Update dependencies.
+
 ## 1.0.7 (August 3, 2019)
 
 - Update all dependencies.

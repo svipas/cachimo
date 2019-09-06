@@ -12,8 +12,8 @@
     "test": "jest tests"
   },
   "devDependencies": {
-    "eslint": "^6.1.0",
-    "jest": "^24.8.0"
+    "eslint": "^6.3.0",
+    "jest": "^24.9.0"
   },
   "keywords": [
     "cache",
