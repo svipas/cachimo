@@ -8,11 +8,9 @@
   "author": "svipben <benas.svipas@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint . --ext js",
-    "test": "jest tests"
+    "test": "jest"
   },
   "devDependencies": {
-    "eslint": "^6.5.1",
     "jest": "^24.9.0"
   },
   "keywords": [
