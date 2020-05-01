@@ -1,23 +1,23 @@
 {
-  "name": "cachimo",
-  "description": "Stores key with value in-memory and can be deleted manually or after given timeout.",
-  "version": "1.0.7",
-  "main": "src/cachimo.js",
-  "typings": "src/cachimo.d.ts",
-  "repository": "https://github.com/svipben/cachimo.git",
-  "author": "svipben <benas.svipas@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "test": "jest"
-  },
-  "devDependencies": {
-    "jest": "^24.9.0"
-  },
-  "keywords": [
-    "cache",
-    "in-memory",
-    "storage",
-    "nodejs",
-    "browser"
-  ]
+	"name": "cachimo",
+	"description": "Stores key with value in-memory and can be deleted manually or after given timeout.",
+	"version": "1.0.7",
+	"main": "src/cachimo.js",
+	"typings": "src/cachimo.d.ts",
+	"repository": "https://github.com/svipben/cachimo.git",
+	"author": "svipben <benas.svipas@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"test": "jest"
+	},
+	"devDependencies": {
+		"jest": "^24.9.0"
+	},
+	"keywords": [
+		"cache",
+		"in-memory",
+		"storage",
+		"nodejs",
+		"browser"
+	]
 }

@@ -39,25 +39,25 @@ const cachimo = require('cachimo');
 
 // stores element in-memory and it will be deleted after given `timeout` which returns Promise
 cachimo
-  .put('key', 'value', 1000) // it will be deleted after 1 sec and Promise will be resolved or rejected
-  .then(({ key, value, timeout }) => {
-    // returns key, value and timeout after delete
-    console.log(`Deleted ${key}:${value} after ${timeout}`);
-  })
-  .catch(err => {
-    // you will get error if key was deleted before `timeout`
-    throw err; // "key does not exist"
-  });
+	.put('key', 'value', 1000) // it will be deleted after 1 sec and Promise will be resolved or rejected
+	.then(({ key, value, timeout }) => {
+		// returns key, value and timeout after delete
+		console.log(`Deleted ${key}:${value} after ${timeout}`);
+	})
+	.catch((err) => {
+		// you will get error if key was deleted before `timeout`
+		throw err; // "key does not exist"
+	});
 
 // if you don't want to use Promise you can send callback which will be executed after given `timeout`
 cachimo.put('key', 'value', 1000, (err, key, value, timeout) => {
-  if (err) {
-    // you will get error if key was deleted before `timeout`
-    throw err; // "key does not exist"
-  }
+	if (err) {
+		// you will get error if key was deleted before `timeout`
+		throw err; // "key does not exist"
+	}
 
-  // returns key, value and timeout after delete
-  console.log(`Deleted ${key}:${value} after ${timeout}`);
+	// returns key, value and timeout after delete
+	console.log(`Deleted ${key}:${value} after ${timeout}`);
 });
 ```
 
@@ -67,17 +67,17 @@ cachimo.put('key', 'value', 1000, (err, key, value, timeout) => {
 const cachimo = require('cachimo');
 
 // Promise
-cachimo.put('key', 'value', 1000).catch(err => {
-  // you will get error because at the end of the code there's `clear()` function which clears all timeouts as well as keys and values
-  throw err; // "key timeout was cleared"
+cachimo.put('key', 'value', 1000).catch((err) => {
+	// you will get error because at the end of the code there's `clear()` function which clears all timeouts as well as keys and values
+	throw err; // "key timeout was cleared"
 });
 
 // callback
-cachimo.put('key', 'value', 1000, err => {
-  if (err) {
-    // you will get error because at the end of the code there's `clear()` function which clears all timeouts as well as keys and values
-    throw err; // "key timeout was cleared"
-  }
+cachimo.put('key', 'value', 1000, (err) => {
+	if (err) {
+		// you will get error because at the end of the code there's `clear()` function which clears all timeouts as well as keys and values
+		throw err; // "key timeout was cleared"
+	}
 });
 
 // removes all elements stored in cache and clears all timeouts
