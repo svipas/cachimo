@@ -1,17 +1,32 @@
 {
 	"name": "cachimo",
 	"description": "Stores key with value in-memory and can be deleted manually or after given timeout.",
+	"homepage": "https://github.com/svipas/cachimo",
 	"version": "1.0.7",
-	"main": "src/cachimo.js",
-	"typings": "src/cachimo.d.ts",
-	"repository": "https://github.com/svipben/cachimo.git",
-	"author": "svipben <benas.svipas@gmail.com>",
+	"main": "./dist/cachimo.js",
+	"author": "svipas",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/svipben/cachimo.git"
+	},
+	"bugs": {
+		"url": "https://github.com/svipas/cachimo/issues"
+	},
 	"license": "MIT",
 	"scripts": {
-		"test": "jest"
+		"compile": "tsc -p ./",
+		"test": "jest",
+		"prepublishOnly": "yarn compile"
 	},
 	"devDependencies": {
-		"jest": "^24.9.0"
+		"@babel/core": "^7.9.6",
+		"@babel/preset-env": "^7.9.6",
+		"@babel/preset-typescript": "^7.9.0",
+		"@types/jest": "^25.2.1",
+		"@types/node": "^13.13.4",
+		"babel-jest": "^25.5.1",
+		"jest": "^25.5.3",
+		"typescript": "^3.8.3"
 	},
 	"keywords": [
 		"cache",
