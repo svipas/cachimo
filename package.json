@@ -4,6 +4,7 @@
 	"homepage": "https://github.com/svipas/cachimo",
 	"version": "2.0.0",
 	"main": "./dist/cachimo.js",
+	"types": "./dist/cachimo.d.ts",
 	"author": "svipas",
 	"repository": {
 		"type": "git",
@@ -14,7 +15,7 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"compile": "tsc -p ./",
+		"compile": "tsc --declaration -p ./",
 		"test": "jest",
 		"prepublishOnly": "yarn compile"
 	},
