@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## 2.0.1 (May 2, 2020)
+
+- Generate declaration file and include it in the `package.json`.
+
 ## 2.0.0 (May 2, 2020)
 
 - Change indentation to tabs.
