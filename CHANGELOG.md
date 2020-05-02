@@ -1,6 +1,12 @@
 ## [Unreleased]
 
-- Update dependencies.
+## 2.0.0 (May 2, 2020)
+
+- Change indentation to tabs.
+- Update all dependencies and add TypeScript.
+- Drop ESLint.
+- Replace CircleCI to Azure Pipelines.
+- Rewrite everything to TypeScript.
 
 ## 1.0.7 (August 3, 2019)
 
