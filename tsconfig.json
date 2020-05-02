@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"module": "CommonJS",
+		"target": "ES2017",
+		"outDir": "dist",
+		"rootDir": "src",
+		"sourceMap": true
+	},
+	"exclude": ["node_modules", "src/__tests__"]
+}
