@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+## 2.0.2 (May 17, 2020)
+
+- Reformat project with new settings.
+- Update all dependencies.
+
 ## 2.0.1 (May 2, 2020)
 
 - Generate declaration file and include it in the `package.json`.
