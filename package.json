@@ -23,11 +23,11 @@
 		"@babel/core": "^7.9.6",
 		"@babel/preset-env": "^7.9.6",
 		"@babel/preset-typescript": "^7.9.0",
-		"@types/jest": "^25.2.1",
-		"@types/node": "^13.13.4",
-		"babel-jest": "^25.5.1",
-		"jest": "^25.5.3",
-		"typescript": "^3.8.3"
+		"@types/jest": "^25.2.2",
+		"@types/node": "^14.0.1",
+		"babel-jest": "^26.0.1",
+		"jest": "^26.0.1",
+		"typescript": "^3.9.2"
 	},
 	"keywords": [
 		"cache",
