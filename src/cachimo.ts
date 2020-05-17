@@ -1,5 +1,10 @@
 type Key = string | number | boolean;
-type Callback = (err: Error | null, key?: Key, value?: any, timeout?: number) => void;
+type Callback = (
+	err: Error | null,
+	key?: Key,
+	value?: any,
+	timeout?: number
+) => void;
 
 const cache: Map<Key, any> = new Map();
 const timeouts: Map<number, () => void> = new Map();
@@ -84,7 +89,12 @@ export function put(key: Key, value: any): boolean;
  *
  * @returns true if element was stored and key doesn't exist, false otherwise.
  */
-export function put(key: Key, value: any, timeout: number, callback: Callback): boolean;
+export function put(
+	key: Key,
+	value: any,
+	timeout: number,
+	callback: Callback
+): boolean;
 
 /**
  * Stores element in cache with specified key and value.
@@ -94,20 +104,42 @@ export function put(key: Key, value: any, timeout: number, callback: Callback): 
  *
  * @returns Promise.
  */
-export function put(key: Key, value: any, timeout: number): Promise<{ key: Key; value: any; timeout: number }>;
+export function put(
+	key: Key,
+	value: any,
+	timeout: number
+): Promise<{ key: Key; value: any; timeout: number }>;
 
-export function put(key: Key, value: any, timeout?: number, callback?: Callback) {
-	if (typeof key !== 'string' && typeof key !== 'number' && typeof key !== 'boolean') {
-		throw new Error(`Key can only be string, number or boolean instead of ${typeof key}.`);
+export function put(
+	key: Key,
+	value: any,
+	timeout?: number,
+	callback?: Callback
+) {
+	if (
+		typeof key !== "string" &&
+		typeof key !== "number" &&
+		typeof key !== "boolean"
+	) {
+		throw new Error(
+			`Key can only be string, number or boolean instead of ${typeof key}.`
+		);
 	}
-	if (typeof key === 'number' && Number.isNaN(key)) {
-		throw new Error('Key can only be string, number or boolean instead of NaN.');
+	if (typeof key === "number" && Number.isNaN(key)) {
+		throw new Error(
+			"Key can only be string, number or boolean instead of NaN."
+		);
 	}
-	if (timeout != null && (typeof timeout !== 'number' || Number.isNaN(timeout) || timeout <= 0)) {
-		throw new Error('Timeout can only be a positive number.');
+	if (
+		timeout != null &&
+		(typeof timeout !== "number" || Number.isNaN(timeout) || timeout <= 0)
+	) {
+		throw new Error("Timeout can only be a positive number.");
 	}
-	if (callback != null && typeof callback !== 'function') {
-		throw new Error(`Callback can only be function instead of ${typeof callback}.`);
+	if (callback != null && typeof callback !== "function") {
+		throw new Error(
+			`Callback can only be function instead of ${typeof callback}.`
+		);
 	}
 
 	if (has(key)) {
@@ -126,7 +158,9 @@ export function put(key: Key, value: any, timeout?: number, callback?: Callback)
 					reject(new Error(`${key} doesn't exist.`));
 				}
 			}, timeout);
-			timeouts.set(timeoutId as any, () => reject(new Error(`${key} timeout was already cleared.`)));
+			timeouts.set(timeoutId as any, () =>
+				reject(new Error(`${key} timeout was already cleared.`))
+			);
 		});
 	}
 
@@ -139,7 +173,9 @@ export function put(key: Key, value: any, timeout?: number, callback?: Callback)
 				callback(new Error(`${key} doesn't exist.`));
 			}
 		}, timeout);
-		timeouts.set(timeoutId as any, () => callback(new Error(`${key} timeout was already cleared.`)));
+		timeouts.set(timeoutId as any, () =>
+			callback(new Error(`${key} timeout was already cleared.`))
+		);
 	}
 
 	return true;

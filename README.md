@@ -23,19 +23,19 @@ npm install cachimo
 - **put**
 
 ```ts
-import * as cachimo from 'cachimo';
+import * as cachimo from "cachimo";
 
 // Stores element in cache, you can remove it manually whenever you want.
 // Returns true if element was successfully stored in cache, false if such key already exist.
-cachimo.put('key', 'value');
+cachimo.put("key", "value");
 ```
 
 ```ts
-import * as cachimo from 'cachimo';
+import * as cachimo from "cachimo";
 
 // Stores element in cache and it will be deleted after given timeout which returns Promise.
 cachimo
-	.put('key', 'value', 1000) // It will be deleted after 1 sec. and Promise will be resolved or rejected.
+	.put("key", "value", 1000) // It will be deleted after 1 sec. and Promise will be resolved or rejected.
 	.then(({ key, value, timeout }) => {
 		// Returns key, value and timeout after delete.
 		console.log(`Deleted ${key}:${value} after ${timeout}`);
@@ -47,10 +47,10 @@ cachimo
 ```
 
 ```ts
-import * as cachimo from 'cachimo';
+import * as cachimo from "cachimo";
 
 // If you don't want to use Promise you can send callback which will be executed after given timeout.
-cachimo.put('key', 'value', 1000, (err, key, value, timeout) => {
+cachimo.put("key", "value", 1000, (err, key, value, timeout) => {
 	// You will get error if key was deleted before timeout.
 	if (err) {
 		throw err; // "Key doesn't exist."
@@ -64,7 +64,7 @@ cachimo.put('key', 'value', 1000, (err, key, value, timeout) => {
 - **clear**
 
 ```ts
-import * as cachimo from 'cachimo';
+import * as cachimo from "cachimo";
 
 // Removes all elements stored in cache and clears all timeouts.
 // Returns number of how much elements was removed from cache.
@@ -74,35 +74,35 @@ cachimo.clear();
 - **get**
 
 ```ts
-import * as cachimo from 'cachimo';
+import * as cachimo from "cachimo";
 
 // Returns value from cache by given key.
-cachimo.get('key');
+cachimo.get("key");
 ```
 
 - **remove**
 
 ```ts
-import * as cachimo from 'cachimo';
+import * as cachimo from "cachimo";
 
 // Returns true if element was removed, false otherwise.
-cachimo.remove('key');
+cachimo.remove("key");
 ```
 
 - **has**
 
 ```ts
-import * as cachimo from 'cachimo';
+import * as cachimo from "cachimo";
 
 // Checks if whether an element with given key exists.
 // Returns true if element exists, false otherwise.
-cachimo.has('key');
+cachimo.has("key");
 ```
 
 - **size**
 
 ```ts
-import * as cachimo from 'cachimo';
+import * as cachimo from "cachimo";
 
 // Returns the number of elements stored in cache.
 cachimo.size();
@@ -111,7 +111,7 @@ cachimo.size();
 - **keys**
 
 ```ts
-import * as cachimo from 'cachimo';
+import * as cachimo from "cachimo";
 
 // Returns all keys stored in cache.
 cachimo.keys();
@@ -120,7 +120,7 @@ cachimo.keys();
 - **values**
 
 ```ts
-import * as cachimo from 'cachimo';
+import * as cachimo from "cachimo";
 
 // Returns all values stored in cache.
 cachimo.values();
@@ -129,7 +129,7 @@ cachimo.values();
 - **entries**
 
 ```ts
-import * as cachimo from 'cachimo';
+import * as cachimo from "cachimo";
 
 // Returns all entries (keys and values) stored in cache.
 cachimo.entries();
