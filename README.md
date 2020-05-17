@@ -4,16 +4,16 @@ Stores key with value in-memory and can be deleted manually or after given timeo
 
 ## Installation
 
-### Yarn
-
-```
-yarn add cachimo
-```
-
 ### npm
 
 ```
 npm install cachimo
+```
+
+### Yarn
+
+```
+yarn add cachimo
 ```
 
 ## Usage
