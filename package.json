@@ -2,7 +2,7 @@
 	"name": "cachimo",
 	"description": "Stores key with value in-memory and can be deleted manually or after given timeout.",
 	"homepage": "https://github.com/svipas/cachimo",
-	"version": "2.0.2",
+	"version": "2.0.3",
 	"main": "./dist/cachimo.js",
 	"types": "./dist/cachimo.d.ts",
 	"author": "svipas",

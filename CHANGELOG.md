@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## 2.0.3 (June 25, 2020)
+
+- Update all dependencies.
+
 ## 2.0.2 (May 17, 2020)
 
 - Reformat project with new settings.
