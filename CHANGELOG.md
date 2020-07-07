@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## 2.0.4 (July 7, 2020)
+
+- Update all dependencies.
+
 ## 2.0.3 (June 25, 2020)
 
 - Update all dependencies.
